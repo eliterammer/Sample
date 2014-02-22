@@ -1,0 +1,3 @@
+sort main.c > out
+cd ..
+echo hello

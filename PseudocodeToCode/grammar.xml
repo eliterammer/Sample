@@ -1,0 +1,485 @@
+
+<root>
+<Production name ="start">
+<name>include main</name>
+<auto/>
+<value>
+<![CDATA[
+#include<stdio.h>
+]]>
+
+</value>
+<next>READ</next>
+<next>DECLARE</next>
+</Production>
+
+
+<procedure>
+	<name>procedure</name>
+	<components>
+		<name>ID</name>
+		<arguments>ID</arguments>
+	</components>
+	<next>statements</next>
+</procedure>
+
+
+
+	<statements>
+		<next>DECLARE</next>
+		<next>READ</next>
+		<next>PRINT</next>
+	</statements>
+
+	<Production name ="DECLARE">
+		<next>statements</next>
+		<components>
+			<component>DATATYPE</component>
+			<component>sp;</component>
+			<component>ID</component>
+		</components>
+		<value>?1 ?2</value>
+	</Production>
+
+	<Production name="DATATYPE">
+		<value>int|float</value>
+	</Production>
+	
+	
+	<Production name = "READ">
+		<components>
+			<component>scanf</component>
+			<component>(</component>
+			<component>"</component>
+			<component>FORMAT_STRING</component>
+			<component>"</component>
+			<component>,</component>
+			<component>ID</component>
+			<component>)</component>
+		</components>
+		<next>statements</next>
+		<value/>
+		<startsWith>scanf</startsWith>
+	</Production>
+
+
+	<Production name = "FORMAT_STRING">
+		<learnable>true</learnable>
+		<components>
+			<component>ID</component>
+		</components>
+		<value>%d|%f</value>
+	</Production>
+
+
+<main_of>
+<name>main of</name>
+<value>
+
+<![CDATA[
+
+void main()
+{
+
+]]>
+
+</value>
+<next>collection</next>
+<next>integer</next>
+<next>float</next>
+<next>program</next>
+</main_of>
+
+<collection>
+<name>collection</name>
+<value>NO_PRINT</value>
+<next>integer</next>
+<next>float</next>
+</collection>
+
+<integer>
+<name>integer</name>
+<value>int</value>
+
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</integer>
+
+
+
+
+<float>
+<name>float</name>
+<value>float</value>
+
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+</float>
+
+
+<ascending>
+<name>ascending</name>
+<value>NO_PRINT</value>
+<next>a</next>
+<next>b</next>
+
+</ascending>
+
+
+<finish>
+<name>finish</name>
+<value>;</value>
+<next>integer</next>
+<next>float</next>
+<next>assign</next>
+<next>program</next>
+<next>scan</next>
+<next>display</next>
+<next>if</next>
+<next>close brace</next>
+<next>else</next>
+<next>for loop</next>
+<next>loop till</next>
+<next>close brace</next>
+<next>collection</next>
+<next>ascending</next>
+</finish>
+
+<for_loop>
+<name>for loop</name>
+<value>for(</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</for_loop>
+
+
+<loop_till>
+<name>loop till</name>
+<value>while(</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</loop_till>
+<if>
+
+<name>if</name>
+<value>if(</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</if>
+
+
+
+
+
+
+
+<display>
+<name>display</name>
+<value>NO_PRINT</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</display>
+
+<close_brace>
+<name>close brace</name>
+<value>}</value>
+<next>for loop</next>
+<next>loop till</next>
+<next>assign</next>
+<next>program</next>
+<next>scan</next>
+<next>display</next>
+<next>if</next>
+<next>else</next>
+<next>ascending</next>
+</close_brace>
+
+
+<else>
+<name>else</name>
+<value>
+else
+{
+</value>
+<next>assign</next>
+<next>program</next>
+<next>scan</next>
+<next>display</next>
+<next>if</next>
+<next>close brace</next>
+<next>ascending</next>
+<next>loop till</next>
+<next>for loop</next>
+</else>
+
+
+
+<scan>
+<name>scan</name>
+<value>NO_PRINT</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</scan>
+
+<program>
+<name>program</name>
+<value>
+}</value>
+<next></next>
+</program>
+
+
+<plus>
+<name>plus</name>
+<value>+</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+
+</plus>
+
+
+
+<minus>
+<name>minus</name>
+<value>-</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+
+</minus>
+
+
+
+
+<equals>
+<name>equals</name>
+<value>=</value>
+
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+</equals>
+
+
+
+
+<assign>
+
+<name>assign</name>
+<value>NO_PRINT</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+</assign>
+
+<comma>
+<name>comma</name>
+<value>NO_PRINT</value>
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+</comma>
+
+
+<begin>
+<name>begin</name>
+<value>NO_PRINT</value>
+<next>assign</next>
+<next>scan</next>
+<next>close brace</next>
+<next>display</next>
+<next>if</next>
+<next>for loop</next>
+<next>loop till</next>
+</begin>
+
+
+<a>
+<name>a</name>
+<value>a</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+<next>if</next>
+<next>plus</next>
+<next>minus</next>
+<next>equals</next>
+<next>finish</next>
+<next>float</next>
+<next>integer</next>
+<next>scan</next>
+<next>display</next>
+<next>for loop</next>
+</a>
+
+<b>
+<name>b</name>
+<value>b</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+<next>plus</next>
+<next>minus</next>
+
+<next>integer</next>
+<next>float</next>
+<next>scan</next>
+<next>display</next>
+<next>equals</next>
+<next>finish</next>
+<next>for loop</next>
+
+</b>
+
+<c>
+<name>c</name>
+<value>c</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+<next>plus</next>
+<next>minus</next>
+
+<next>equals</next>
+<next>finish</next>
+
+
+</c>
+
+
+<d>
+<name>d</name>
+<value>d</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+<next>plus</next>
+<next>minus</next>
+
+<next>equals</next>
+<next>finish</next>
+
+
+</d>
+
+
+<e>
+<name>e</name>
+<value>e</value>
+<next>a</next>
+<next>b</next>
+<next>c</next>
+
+
+
+<next>plus</next>
+<next>minus</next>
+
+<next>equals</next>
+<next>finish</next>
+
+
+</e>
+
+
+
+<one>
+<name>one</name>
+<value>1</value>
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+<next>finish</next>
+<next>then</next>
+<next>comma</next>
+<next>begin</next>
+</one>
+
+<two>
+<name>two</name>
+<value>2</value>
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+<next>finish</next>
+<next>then</next>
+<next>begin</next>
+</two>
+
+
+<zero>
+<name>zero</name>
+<value>0</value>
+
+<next>one</next>
+<next>two</next>
+<next>zero</next>
+<next>finish</next>
+<next>then</next>
+
+</zero>
+
+
+
+
+
+</root>

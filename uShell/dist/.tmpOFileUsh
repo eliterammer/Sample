@@ -1,0 +1,14 @@
+total 92
+-rw-rw-r-- 1 sriraam sriraam   184 Oct 11 03:26 fileParser.h
+-rw-rw-r-- 1 sriraam sriraam  1322 Oct 11 15:01 parse.h
+-rw-rw-r-- 1 sriraam sriraam 12141 Oct 15 00:18 parse.c
+-rw-rw-r-- 1 sriraam sriraam   313 Oct 17 18:44 fileParser.c
+-rw-rw-r-- 1 sriraam sriraam  2072 Oct 17 22:02 main.c
+-rw-rw-r-- 1 sriraam sriraam    65 Oct 17 22:22 makefile
+drwxrwxr-x 2 sriraam sriraam  4096 Oct 17 23:05 ushlib
+drwxrwxr-x 4 sriraam sriraam  4096 Oct 17 23:06 ..
+-rw-rw-r-- 1 sriraam sriraam  8550 Oct 17 23:07 ush.tar
+-rwxrwxr-x 1 sriraam sriraam 29943 Oct 17 23:07 ush
+drwxrwxr-x 3 sriraam sriraam  4096 Oct 17 23:08 .
+-rw------- 1 sriraam sriraam   162 Oct 17 23:09 out
+-rw------- 1 sriraam sriraam     0 Oct 17 23:10 .tmpOFileUsh
